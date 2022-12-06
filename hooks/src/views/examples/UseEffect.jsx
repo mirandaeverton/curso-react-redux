@@ -5,6 +5,7 @@ import SectionTitle from '../../components/layout/SectionTitle'
 const UseEffect = (props) => {
     const [number, setNumber] = useState(1)
     const [fatorial, setFatorial] = useState(1)
+    const [isEven, setIsEven] = useState(false)
 
     function calcFatorial(number) {
         if(number < 0) return -1
@@ -18,6 +19,11 @@ const UseEffect = (props) => {
 
     useEffect(() => {
         setFatorial(calcFatorial(number))
+        if(number%2 === 0) {
+            setIsEven(true)
+        }else {
+            setIsEven(false)
+        }
     }, [number])
 
     return (
@@ -39,6 +45,10 @@ const UseEffect = (props) => {
             </div>
 
             <SectionTitle title="Exercício #02" />
+            <div>
+                <span className="text">Status: </span>
+                <span className="text red">{isEven ? "PAR" : "ÍMPAR"}</span>
+            </div>
         </div>
     )
 }
