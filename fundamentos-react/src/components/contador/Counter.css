@@ -1,0 +1,20 @@
+.Step {
+    margin: 15px;
+    font-size: 1.3rem;
+}
+
+
+.Step input {
+    margin-left: 5px;
+    font-size: 1.1rem;
+    width: 50px;
+}
+
+.Counter button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #b2abef;
+    border: none;
+    margin: 15px;    
+}
